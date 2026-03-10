@@ -15,7 +15,7 @@ export const PROFILE = {
   username: "cekYc",
   title: "Backend-Focused Full-Stack Developer",
   tagline: "Building systems that think for themselves.",
-  bio: `I'm a backend-focused developer who loves going deeper than the surface — from designing my own programming language (Gojo Lang) to writing a recursive DNS resolver from scratch in Go with zero dependencies. I build with Python, Node.js, Go, Rust and C++ and I'm always chasing the next hard problem.`,
+  bio: `I'm a backend-focused developer who loves going deeper than the surface — from designing my own programming language (Zet Lang) to writing a recursive DNS resolver from scratch in Go with zero dependencies. I build with Python, Node.js, Go, Rust and C++ and I'm always chasing the next hard problem.`,
   location: "Tokat, Turkey",
   github: "https://github.com/cekYc",
   website: "https://erceky.gamer.gd",
