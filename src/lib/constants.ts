@@ -19,7 +19,7 @@ export const PROFILE = {
   location: "Tokat, Turkey",
   github: "https://github.com/cekYc",
   website: "https://erceky.gamer.gd",
-  email: "erayc2640@gmail.com",
+  email: "eraycicek3729@gmail.com",
   availableFor: "Open to EU Opportunities",
   stats: {
     repos: 22,
