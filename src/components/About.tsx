@@ -10,7 +10,7 @@ const highlights = [
   {
     icon: <Code2 size={20} />,
     title: "Language Designer",
-    desc: "Built my own programming language (Gojo Lang) with lexer, parser, interpreter in Python — then rewrote the compiler in Rust.",
+    desc: "Built my own programming language (Zet Lang) with lexer, parser, interpreter in Python — then rewrote the compiler in Rust.",
   },
   {
     icon: <Terminal size={20} />,

@@ -146,15 +146,15 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
-    title: "Gojo Lang",
-    description: "A custom programming language with its own compiler, interpreter, and browser-based IDE.",
+    title: "Zet Lang",
+    description: "A custom programming language",
     longDescription:
-      "Designed from scratch with a Python interpreter (v7, Turing-complete), then rewrote the compiler in Rust for native performance. Includes a WebAssembly-powered IDE running serverless in the browser with Monaco Editor, Pyodide, and Jujutsu Kaisen-themed visuals. Fibonacci-40 benchmark: 2x faster than Go, 50x faster than Python.",
-    tech: ["Rust", "Python", "React", "WebAssembly", "Pyodide", "Monaco Editor"],
+      "Designed from scratch with a Rust interpreter (v7, Turing-complete), then rewritten in Rust for local performance. Fibonacci-40 benchmark: 2x faster than Go, 50x faster than Python.",
+    tech: ["Rust"],
     tags: ["Systems", "Compiler", "Language Design"],
-    github: "https://github.com/cekYc/renewed-gojo-lang-source",
+    github: "https://github.com/cekYc/zet-lang-source",
     demo: "https://gojo-lang-ide.netlify.app",
-    language: "Rust / Python",
+    language: "Rust",
     languageColor: "#dea584",
     featured: true,
     icon: "🧬",
