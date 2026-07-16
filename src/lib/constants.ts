@@ -16,16 +16,16 @@ export const PROFILE = {
   title: "Backend-Focused Full-Stack Developer",
   tagline: "Building systems that think for themselves.",
   bio: `I'm a backend-focused developer who loves going deeper than the surface — from designing my own programming language (Zet Lang) to writing a recursive DNS resolver from scratch in Go with zero dependencies. I build with Python, Node.js, Go, Rust and C++ and I'm always chasing the next hard problem.`,
-  location: "Tokat, Turkey",
+  location: "Sakarya/Turkey",
   github: "https://github.com/cekYc",
   website: "https://erceky.gamer.gd",
   email: "eraycicek3729@gmail.com",
   availableFor: "Open to EU Opportunities",
   stats: {
-    repos: 22,
-    contributions: 148,
-    languages: 10,
-    followers: 3,
+    repos: 39,
+    contributions: 319,
+    languages: 19,
+    followers: 4,
   },
 };
 
@@ -145,6 +145,84 @@ export interface Project {
 }
 
 export const PROJECTS: Project[] = [
+  {
+    title: "Synapse",
+    description: "Next-gen node-based visual automation engine for Windows.",
+    longDescription:
+      "A bridge project eliminating the 'too simple or too complex' dilemma of automation tools. Features a React Flow visual editor, high-performance Rust core (JSON to IR compiler, dedicated executor thread), GDI BitBlt vision processing, and standard input simulation.",
+    tech: ["Rust", "Tauri", "React", "TypeScript", "Windows API"],
+    tags: ["Systems", "Desktop", "Automation"],
+    github: "https://github.com/cekYc/Synapse",
+    language: "Rust",
+    languageColor: "#dea584",
+    featured: true,
+    icon: "⚡",
+  },
+  {
+    title: "Project M - Voxel Engine",
+    description: "Custom Vulkan-based Voxel game engine in Rust.",
+    longDescription:
+      "Built from scratch using Rust and Vulkan. Features asynchronous Rayon-based chunk meshing, LAN co-op without dedicated servers, 3D entities with AI, farming and season systems, and a thermodynamics engine for dynamic heat propagation.",
+    tech: ["Rust", "Vulkan", "Rayon", "GLSL"],
+    tags: ["Systems", "Game Engine", "Graphics"],
+    github: "https://github.com/cekYc/deadly_sins_engine",
+    language: "Rust",
+    languageColor: "#dea584",
+    featured: true,
+    icon: "🌌",
+  },
+  {
+    title: "Ceky Stream",
+    description: "Hybrid P2P live streaming platform with zero-trust crypto.",
+    longDescription:
+      "Minimizes bandwidth costs for high-concurrency live streams using a P2P mesh network. Features Multi-parent RS(k,m) FEC, Ed25519 & BLAKE3 zero-trust cryptography, and a hybrid Edge/TURN layer for NAT traversal.",
+    tech: ["Rust", "Go", "WebRTC", "P2P"],
+    tags: ["Systems", "Networking", "Streaming"],
+    github: "https://github.com/cekYc/ceky-stream",
+    language: "Rust",
+    languageColor: "#dea584",
+    featured: true,
+    icon: "📡",
+  },
+  {
+    title: "cekyP2P",
+    description: "Zero-dependency peer-to-peer network stack built from scratch in Rust.",
+    longDescription:
+      "A complete P2P stack with custom binary protocol, Noise XX handshake (Ed25519 + ChaChaPoly1305), Kademlia DHT, NAT traversal (STUN, hole punching, relay), and zero-copy memory-mapped file transfers.",
+    tech: ["Rust", "Networking", "Cryptography"],
+    tags: ["Systems", "Networking", "P2P"],
+    github: "https://github.com/cekYc/ceky-p2p",
+    language: "Rust",
+    languageColor: "#dea584",
+    featured: true,
+    icon: "🌐",
+  },
+  {
+    title: "Telegram to Discord Bridge",
+    description: "Memory-efficient, bidirectional media sharing bridge.",
+    longDescription:
+      "A Go bot that forwards media between Telegram and Discord. Features SQLite-backed persistent queues, advanced moderation (regex, MIME filtering), AI moderation layer, rich formatting, and a pluggable transport architecture.",
+    tech: ["Go", "SQLite", "Telegram API", "Discord API"],
+    tags: ["Backend", "Bot", "Integration"],
+    github: "https://github.com/cekYc/cross-platform_media_sharing",
+    language: "Go",
+    languageColor: "#00ADD8",
+    featured: true,
+    icon: "🌉",
+  },
+  {
+    title: "Merchant Online Order",
+    description: "Real-time online order system with customer, admin, and courier panels.",
+    longDescription:
+      "Full-stack ordering system featuring SMS auth, WebSocket for real-time updates, JWT-based security, and a Go + PostgreSQL backend. Includes menu management, live order tracking, and a delivery flow for couriers.",
+    tech: ["Go", "React", "TypeScript", "PostgreSQL", "WebSocket"],
+    tags: ["Full-Stack", "Real-Time", "E-Commerce"],
+    github: "https://github.com/cekYc/merchant_online_order",
+    language: "TypeScript",
+    languageColor: "#3178c6",
+    featured: true,
+    icon: "🍔",
+  },
   {
     title: "Zet Lang",
     description: "A custom programming language",
@@ -340,18 +418,42 @@ export const TIMELINE: TimelineEvent[] = [
     icon: "🚀",
     tech: ["Next.js 16", "TypeScript", "SSE", "PWA"],
   },
+  {
+    date: "Apr 2026",
+    title: "Networking & P2P Protocols",
+    description:
+      "Developed a zero-dependency P2P stack in Rust (cekyP2P) and a memory-efficient Go media bridge between Telegram and Discord.",
+    icon: "🌐",
+    tech: ["Rust", "Go", "Cryptography", "SQLite"],
+  },
+  {
+    date: "May 2026",
+    title: "Game Engines & Automation",
+    description:
+      "Created a custom Vulkan Voxel engine (Project M) and Synapse, a next-gen node-based visual automation tool for Windows.",
+    icon: "🌌",
+    tech: ["Rust", "Vulkan", "React", "Tauri"],
+  },
+  {
+    date: "Jul 2026",
+    title: "P2P Live Streaming",
+    description:
+      "Built Ceky Stream, a hybrid P2P live streaming platform utilizing Reed-Solomon FEC and zero-trust crypto to reduce bandwidth costs.",
+    icon: "📡",
+    tech: ["Rust", "Go", "WebRTC"],
+  },
 ];
 
 /* ─── Language stats for visualization ─── */
 export const LANGUAGE_STATS = [
-  { name: "TypeScript", percentage: 35, color: "#3178c6" },
-  { name: "Python", percentage: 22, color: "#3572A5" },
-  { name: "Go", percentage: 12, color: "#00ADD8" },
-  { name: "Rust", percentage: 8, color: "#dea584" },
-  { name: "C++", percentage: 8, color: "#f34b7d" },
-  { name: "JavaScript", percentage: 7, color: "#f1e05a" },
-  { name: "PHP", percentage: 5, color: "#4F5D95" },
-  { name: "Other", percentage: 3, color: "#64748b" },
+  { name: "TypeScript", percentage: 34, color: "#3178c6" },
+  { name: "Rust", percentage: 26.8, color: "#dea584" },
+  { name: "Go", percentage: 8.8, color: "#00ADD8" },
+  { name: "CSS", percentage: 7.1, color: "#563d7c" },
+  { name: "JavaScript", percentage: 6.3, color: "#f1e05a" },
+  { name: "Python", percentage: 3.3, color: "#3572A5" },
+  { name: "PHP", percentage: 3.2, color: "#4F5D95" },
+  { name: "Other", percentage: 10.5, color: "#64748b" },
 ];
 
 /* ─── Tags / Filters for projects ─── */
