@@ -176,3 +176,9 @@ body {
   transform: translateY(-4px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(139, 92, 246, 0.1);
 }
+
+@media (hover: hover) and (pointer: fine) {
+  body, a, button, [role="button"] {
+    cursor: none !important;
+  }
+}

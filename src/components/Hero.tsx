@@ -1,14 +1,20 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, MapPin, Sparkles } from "lucide-react";
 import { PROFILE, ROLES } from "@/lib/constants";
+import MagneticWrapper from "./MagneticWrapper";
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+
+  const { scrollY } = useScroll();
+  const y1 = useTransform(scrollY, [0, 1000], [0, 200]);
+  const y2 = useTransform(scrollY, [0, 1000], [0, -200]);
+  const y3 = useTransform(scrollY, [0, 1000], [0, 100]);
 
   const currentRole = ROLES[roleIndex];
 
@@ -38,9 +44,9 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
       {/* Gradient orbs */}
-      <div className="absolute top-1/4 -left-40 w-125 h-125 rounded-full bg-accent-purple/10 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-40 w-125 h-125 rounded-full bg-accent-blue/10 blur-[120px] pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 rounded-full bg-accent-cyan/5 blur-[150px] pointer-events-none" />
+      <motion.div style={{ y: y1 }} className="absolute top-1/4 -left-40 w-[500px] h-[500px] rounded-full bg-accent-purple/10 blur-[120px] pointer-events-none" />
+      <motion.div style={{ y: y2 }} className="absolute bottom-1/4 -right-40 w-[500px] h-[500px] rounded-full bg-accent-blue/10 blur-[120px] pointer-events-none" />
+      <motion.div style={{ y: y3 }} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-accent-cyan/5 blur-[150px] pointer-events-none" />
 
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         {/* Status badge */}
@@ -110,19 +116,23 @@ export default function Hero() {
           transition={{ delay: 1.1 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <a
-            href="#projects"
-            className="group relative px-8 py-3 rounded-xl bg-linear-to-r from-accent-purple to-accent-blue text-white font-medium transition-all duration-300 hover:shadow-lg hover:shadow-accent-purple/25 hover:scale-105 flex items-center gap-2"
-          >
-            <Sparkles size={18} />
-            View My Work
-          </a>
-          <a
-            href="#contact"
-            className="px-8 py-3 rounded-xl border border-border-subtle text-text-secondary font-medium hover:text-text-primary hover:border-accent-purple/50 hover:bg-white/5 transition-all duration-300"
-          >
-            Get In Touch
-          </a>
+          <MagneticWrapper>
+            <a
+              href="#projects"
+              className="group relative px-8 py-3 rounded-xl bg-linear-to-r from-accent-purple to-accent-blue text-white font-medium transition-all duration-300 hover:shadow-lg hover:shadow-accent-purple/25 flex items-center gap-2"
+            >
+              <Sparkles size={18} />
+              View My Work
+            </a>
+          </MagneticWrapper>
+          <MagneticWrapper>
+            <a
+              href="#contact"
+              className="px-8 py-3 rounded-xl border border-border-subtle text-text-secondary font-medium hover:text-text-primary hover:border-accent-purple/50 hover:bg-white/5 transition-all duration-300 block"
+            >
+              Get In Touch
+            </a>
+          </MagneticWrapper>
         </motion.div>
 
         {/* Quick stats */}
